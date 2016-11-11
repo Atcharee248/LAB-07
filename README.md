@@ -495,6 +495,44 @@ public class intergerTest
 9.	y%8
 10.	100*x+y%2-a
 ```
+
+```
+namespace Lab7
+{
+    public class intergerTest
+    {
+        static void Main(string[] args)
+        {
+            double a = 10, b = 20, x = 5, y = 2,t1,t2,t3,t4,t5,t6,t7,t8,t9,t0;
+            t1 = a + b;
+            Console.WriteLine("   {1} + {2} = {0} ", t1, a, b);
+            t2 = x - b;
+            Console.WriteLine("   {1} - {2} = {0} ", t2, x, b);
+            t3 = x* b;
+            Console.WriteLine("   {1} * {2} = {0} ", t3, x, b);
+            t4 = y / a;
+            Console.WriteLine("   {1} / {2} = {0} ", t4, y, a);
+            t5 = b % y;
+            Console.WriteLine("   {1} % {2} = {0} ", t5, b, y);
+            t6 = y + 10 % x;
+            Console.WriteLine("   {1} + 10 % {2} = {0} ", t6, y, x);
+            t7 = a / 3 * 5;
+            Console.WriteLine("   {1} / 3 * 5 = {0} ", t7, a);
+            t8 = 9 / 2 * a;
+            Console.WriteLine("   9 / 2 * {1}  = {0} ", t8, a);
+            t9 = y % 8;
+            Console.WriteLine("   {1} % 8 = {0} ", t9, y);
+            t0 = 100 * x + y % 2 - a;
+            Console.WriteLine("   100 * {1} + {2} % 2 - {3} = {0} ", t0, x, y, a);
+
+
+        }
+        }
+
+    }
+```
+<img src="https://github.com/Atcharee248/LAB-07/blob/master/Lab7_9.JPG?raw=true">
+
 ##2.2.3. ชนิดข้อมูลเลขทศนิยม (Floating Point and Decimal Types)
 ตัวเลขจำนวนทศนิยม มักจะใช้ในการคำนวณทางวิทยาศาสตร์ เนื่องจากค่าในวิทยาศาสตร์ต้องการความละเอียดสูง หรือมีค่าสูงมากกว่าที่เลขจำนวนเต็มจะเก็บได้
 
@@ -507,6 +545,30 @@ public class intergerTest
 ระยะทาง 1 ไมล์ คิดเป็น 1.609344 กิโลเมตร
 
 ให้เขียนโปรแกรมหาระยะทางในการเดินทางของแสง ในหน่วยกิโลเมตรต่อวินาทีและเวลาในการเดินทางของแสงจากดวงอาทิตย์มายังโลก
+```
+namespace Lab7
+{
+    public class intergerTest
+    {
+        static void Main(string[] args)
+        {
+            const double lightSpeed = 186000d;
+            Console.WriteLine("Light speed = {0} Mile Per second", lightSpeed);
+            const double mileperkm = 1.609344;
+            Console.WriteLine("Light speed = {0} km Per second", lightSpeed * mileperkm);
+            const double SunToEarthDistance = 93000000d;
+            Console.WriteLine("Sun to earth distance = {0} km", SunToEarthDistance * mileperkm);
+            double SunToEarthTimeOfLight = SunToEarthDistance / lightSpeed;
+            Console.WriteLine("Sun to earth time of light = {0} seconds", SunToEarthTimeOfLight);
+            Console.WriteLine("Sun to earth time of light = {0} minutes", SunToEarthTimeOfLight / 60d);
+
+
+        }
+        }
+
+    }
+```
+<img src = "https://github.com/Atcharee248/LAB-07/blob/master/Lab7_10.JPG?raw=true">
 
 ##ตัวอย่าง โปรแกรมคำนวณระยะทางและเวลาของแสงจากดวงอาทิตย์ถึงโลก
 ```csharp
@@ -551,6 +613,76 @@ Jupiter |	778,330,000 km
 Uranus |	2,873,550,000 km		
 Neptune |	4,501,000,000 km		
 Pluto |	5,945,900,000 km		
+
+```
+namespace Lab7
+{
+    public class intergerTest
+    {
+        static void Main(string[] args)
+        {
+            const double lightSpeed = 186000d;   
+            Console.WriteLine("Light speed = {0} Mile Per second", lightSpeed);
+            const double mileperkm = 1.609344;
+            Console.WriteLine("Light speed = {0} km Per second", lightSpeed * mileperkm);
+            Console.WriteLine("");
+            const double au = 93000000d;
+            const double SunToMercuryDistance = 57910000 / mileperkm;  
+            Console.WriteLine("             Mercury");
+            Console.WriteLine("Sun to mercury distance = {0} A.U.", SunToMercuryDistance / au);
+            double SunToMercuryTimeOfLight = SunToMercuryDistance / lightSpeed;  
+            Console.WriteLine("Sun to mercury time of light = {0} minutes", SunToMercuryTimeOfLight / 60d);
+            Console.WriteLine("");
+            const double SunToVenusDistance = 108200000 / mileperkm;  
+            Console.WriteLine("             Venus");
+            Console.WriteLine("Sun to venus distance = {0} A.U.", SunToVenusDistance / au);
+            double SunToVenusTimeOfLight = SunToVenusDistance / lightSpeed;  
+            Console.WriteLine("Sun to mercury time of light = {0} minutes", SunToVenusTimeOfLight / 60d);
+            Console.WriteLine("");
+            const double SunToEarthDistance = 149600000 / mileperkm;  
+            Console.WriteLine("             Earth");
+            Console.WriteLine("Sun to earth distance = {0} A.U.", SunToEarthDistance / au);
+            double SunToEarthTimeOfLight = SunToEarthDistance / lightSpeed;  
+            Console.WriteLine("Sun to earth time of light = {0} minutes", SunToEarthTimeOfLight / 60d);
+            Console.WriteLine("");
+            const double SunToMarsDistance = 227940000 / mileperkm;  
+            Console.WriteLine("             Mars");
+            Console.WriteLine("Sun to mars distance = {0} A.U.", SunToMarsDistance / au);
+            double SunToMarsTimeOfLight = SunToMarsDistance / lightSpeed;  
+            Console.WriteLine("Sun to mars time of light = {0} minutes", SunToMarsTimeOfLight / 60d);
+            Console.WriteLine("");
+            const double SunToJupiterDistance = 778330000 / mileperkm;  
+            Console.WriteLine("             Jupiter");
+            Console.WriteLine("Sun to jupiter distance = {0} A.U.", SunToJupiterDistance / au);
+            double SunToJupiterTimeOfLight = SunToJupiterDistance / lightSpeed;  
+            Console.WriteLine("Sun to jupiter time of light = {0} minutes", SunToJupiterTimeOfLight / 60d);
+            Console.WriteLine("");
+            const double SunToUranusDistance = 2873550000 / mileperkm;  
+            Console.WriteLine("             Uranus");
+            Console.WriteLine("Sun to uranus distance = {0} A.U.", SunToUranusDistance / au);
+            double SunToUranusTimeOfLight = SunToJupiterDistance / lightSpeed;  
+            Console.WriteLine("Sun to uranus time of light = {0} minutes", SunToUranusTimeOfLight / 60d);
+            Console.WriteLine("");
+            const double SunToNeptuneDistance = 4501000000 / mileperkm;  
+            Console.WriteLine("             Neptune");
+            Console.WriteLine("Sun to neptune distance = {0} A.U.", SunToNeptuneDistance / au);
+            double SunToNeptuneTimeOfLight = SunToNeptuneDistance / lightSpeed; 
+            Console.WriteLine("Sun to neptune time of light = {0} minutes", SunToNeptuneTimeOfLight / 60d);
+            Console.WriteLine("");
+            const double SunToPlutoDistance = 5945900000 / mileperkm;  
+            Console.WriteLine("             Pluto");
+            Console.WriteLine("Sun to pluto distance = {0} A.U.", SunToPlutoDistance / au);
+            double SunToPlutoTimeOfLight = SunToPlutoDistance / lightSpeed;  
+            Console.WriteLine("Sun to pluto time of light = {0} minutes", SunToPlutoTimeOfLight / 60d);
+            Console.WriteLine("");
+
+
+        }
+        }
+
+    }
+```
+<img src= "https://github.com/Atcharee248/LAB-07/blob/master/Lab7_11.JPG?raw=true">
 
 ##คลาส Math 
 ในภาษา C# มีคลาสที่เป็นตัวช่วยคำนวณทางคณิตศาสตร์ ที่ช่วยให้เราสามารถคำนวณฟังก์ชันพื้นฐานได้ อย่างรวดเร็ว ไม่ต้องพัฒนาโปรแกรมเพิ่มเติมด้วยเอง นั่นคือคลาส Math  ฟังก์ชันทางคณิตศาสตร์ที่ใช้บ่อยๆ สามารถดูรายละเอียดทั้งหมดได้จาก 
@@ -610,4 +742,78 @@ The sine of       6.00 = -0.279415         *
 2.	y = cos(x)
 3.	y = tan(x)
 ```
-	
+1. <br>
+```
+namespace Lab7
+{
+    public class intergerTest
+    {
+        static void Main(string[] args)
+        {
+            for (float i = 0; i < Math.PI * 2.0F; i += 0.3F)
+            {
+                Console.WriteLine("The sine of {0,10:F} = {1,-10:F6}" + spaces((i * i)) + "*", i, (i * i));
+            }
+
+        }
+        private static string spaces(double val)
+        {
+            string SpaceString = new String(' ', (int)val);
+            return SpaceString;
+        }
+        }
+
+    }
+```
+<img src ="https://github.com/Atcharee248/LAB-07/blob/master/Lab7_12.JPG?raw=true">
+
+<br> 2.<br>
+```
+namespace Lab7
+{
+    public class intergerTest
+    {
+        static void Main(string[] args)
+        {
+            for (float i = 0; i < Math.PI * 2.0F; i += 0.3F)
+            {
+                Console.WriteLine("y = Cos x {0,10:F} = {1,-10:F6}" + spaces(Math.Cos(i)) + "*", i, Math.Cos(i));
+            }
+
+        }
+        private static string spaces(double val)
+        {
+            string SpaceString = new String(' ', ((int)(val * 10.0)) + 10);
+            return SpaceString;
+        }
+        }
+
+    }
+```
+<img src="https://github.com/Atcharee248/LAB-07/blob/master/Lab7_13.JPG?raw=true">
+
+<br>3.<br>
+```
+
+namespace Lab7
+{
+    public class intergerTest
+    {
+        static void Main(string[] args)
+        {
+            for (float i = 0; i < Math.PI * 2.0F; i += 0.3F)
+            {
+                Console.WriteLine("y = Tan x {0,10:F} = {1,-10:F6}" + spaces(Math.Tan(i)) + "*", i, Math.Tan(i));
+            }
+
+        }
+        private static string spaces(double val)
+        {
+            string SpaceString = new String(' ', (int)val + 100);
+            return SpaceString;
+        }
+        }
+
+    }
+```
+<img src="https://github.com/Atcharee248/LAB-07/blob/master/Lab7_14.JPG?raw=true">
